@@ -21,7 +21,7 @@ class OpenRouterClient:
         headers = {
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "HTTP-Referer": "https://github.com/leone/phm-paper-parser",
+            "HTTP-Referer": "https://phm-reproducibility-gap.invalid",
             "X-Title": "PHM Repro Audit",
         }
         if self.transport is not None:
