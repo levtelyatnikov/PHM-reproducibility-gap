@@ -8,7 +8,8 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from shared.pdf_extract import _extract_with_pypdf, extract_pdf_text
+from shared.pdf_extract import _extract_with_pypdf, extract_pdf_text, extract_text_from_pdf
+from shared.schemas import PdfExtractionResult
 
 
 class PdfExtractTests(unittest.TestCase):
@@ -51,6 +52,41 @@ class PdfExtractTests(unittest.TestCase):
             self.assertEqual(logger.level, logging.WARNING)
         finally:
             logger.setLevel(original_level)
+
+    def test_extract_text_from_pdf_uses_ocr_when_standard_extractors_return_empty(self) -> None:
+        empty = PdfExtractionResult(text="", backend="pypdf")
+        ocr = PdfExtractionResult(text="scanned text", backend="ocr_tesseract")
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            path = Path(tmp_dir) / "sample.pdf"
+            path.write_bytes(b"%PDF-1.4\n%EOF\n")
+            with (
+                patch("shared.pdf_extract._extract_with_pymupdf", return_value=None),
+                patch("shared.pdf_extract._extract_with_pdfplumber", return_value=None),
+                patch("shared.pdf_extract._extract_with_pypdf", return_value=empty),
+                patch("shared.pdf_extract._extract_with_ocr", return_value=ocr),
+            ):
+                result = extract_text_from_pdf(path)
+
+        self.assertEqual(result.backend, "ocr_tesseract")
+        self.assertEqual(result.text, "scanned text")
+
+    def test_extract_text_from_pdf_preserves_empty_backend_when_ocr_fails(self) -> None:
+        empty = PdfExtractionResult(text="", backend="pypdf")
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            path = Path(tmp_dir) / "sample.pdf"
+            path.write_bytes(b"%PDF-1.4\n%EOF\n")
+            with (
+                patch("shared.pdf_extract._extract_with_pymupdf", return_value=None),
+                patch("shared.pdf_extract._extract_with_pdfplumber", return_value=None),
+                patch("shared.pdf_extract._extract_with_pypdf", return_value=empty),
+                patch("shared.pdf_extract._extract_with_ocr", return_value=None),
+            ):
+                result = extract_text_from_pdf(path)
+
+        self.assertEqual(result.backend, "pypdf")
+        self.assertEqual(result.text, "")
 
 
 if __name__ == "__main__":

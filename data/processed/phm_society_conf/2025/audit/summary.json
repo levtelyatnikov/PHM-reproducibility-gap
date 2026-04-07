@@ -2,23 +2,21 @@
   "source_group": "phm_society_conf",
   "year": 2025,
   "paper_count": 46,
-  "repro_audit_eligible_count": 45,
+  "repro_audit_eligible_count": 46,
   "track_counts": {
     "Technical Research Papers": 29,
     "Industry Experience Papers": 17
   },
   "retrieval_status_counts": {
-    "full_text": 45,
-    "pdf_downloaded": 1
+    "full_text": 46
   },
   "analysis_text_source_counts": {
-    "full_text": 45,
-    "missing_full_text": 1
+    "full_text": 46
   },
   "code_label_counts": {
-    "A5": 42,
+    "A5": 41,
     "A1": 1,
-    "A2": 2,
+    "A2": 3,
     "A3": 1
   },
   "data_label_counts": {
@@ -29,11 +27,11 @@
   "eligible_code_label_counts": {
     "A5": 41,
     "A1": 1,
-    "A2": 2,
+    "A2": 3,
     "A3": 1
   },
   "eligible_data_label_counts": {
-    "A5": 43,
+    "A5": 44,
     "A1": 1,
     "A2": 1
   },
@@ -50,5 +48,5 @@
     "public_dataset_claim": 1,
     "named_benchmark": 5
   },
-  "review_required_count": 1
+  "review_required_count": 0
 }

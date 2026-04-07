@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import logging
+import shutil
+import subprocess
+import tempfile
 from contextlib import contextmanager
 from pathlib import Path
 
@@ -50,6 +53,53 @@ def _extract_with_pypdf(path: Path) -> PdfExtractionResult | None:
         return None
 
 
+def _extract_with_ocr(path: Path) -> PdfExtractionResult | None:
+    gs_path = shutil.which("gs")
+    tesseract_path = shutil.which("tesseract")
+    if not gs_path or not tesseract_path:
+        return None
+
+    try:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp_root = Path(tmp_dir)
+            image_pattern = tmp_root / "page-%03d.png"
+            subprocess.run(
+                [
+                    gs_path,
+                    "-q",
+                    "-dNOPAUSE",
+                    "-dBATCH",
+                    "-sDEVICE=png16m",
+                    "-r200",
+                    f"-sOutputFile={image_pattern}",
+                    str(path),
+                ],
+                check=True,
+                capture_output=True,
+            )
+            page_images = sorted(tmp_root.glob("page-*.png"))
+            if not page_images:
+                return None
+
+            texts: list[str] = []
+            for image_path in page_images:
+                completed = subprocess.run(
+                    [tesseract_path, str(image_path), "stdout", "--psm", "6"],
+                    check=True,
+                    capture_output=True,
+                )
+                text = completed.stdout.decode("utf-8", errors="ignore").strip()
+                if text:
+                    texts.append(text)
+
+            combined_text = "\n".join(texts).strip()
+            if not combined_text:
+                return None
+            return PdfExtractionResult(text=combined_text, backend="ocr_tesseract")
+    except Exception:  # noqa: BLE001
+        return None
+
+
 @contextmanager
 def _suppress_pypdf_warnings():
     logger = logging.getLogger("pypdf")
@@ -62,10 +112,19 @@ def _suppress_pypdf_warnings():
 
 
 def extract_text_from_pdf(path: Path) -> PdfExtractionResult:
+    last_result: PdfExtractionResult | None = None
     for extractor in (_extract_with_pymupdf, _extract_with_pdfplumber, _extract_with_pypdf):
         result = extractor(path)
-        if result is not None:
+        if result is None:
+            continue
+        last_result = result
+        if result.text.strip():
             return result
+    ocr_result = _extract_with_ocr(path)
+    if ocr_result is not None:
+        return ocr_result
+    if last_result is not None:
+        return last_result
     return PdfExtractionResult(
         text="",
         backend="unavailable",

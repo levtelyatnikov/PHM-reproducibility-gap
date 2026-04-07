@@ -2,17 +2,15 @@
   "source_group": "ijphm",
   "year": 2024,
   "paper_count": 37,
-  "repro_audit_eligible_count": 36,
+  "repro_audit_eligible_count": 37,
   "track_counts": {
     "Technical Papers": 37
   },
   "retrieval_status_counts": {
-    "full_text": 36,
-    "metadata_only": 1
+    "full_text": 37
   },
   "analysis_text_source_counts": {
-    "full_text": 36,
-    "missing_full_text": 1
+    "full_text": 37
   },
   "code_label_counts": {
     "A5": 36,
@@ -23,11 +21,11 @@
     "A4": 1
   },
   "eligible_code_label_counts": {
-    "A5": 35,
+    "A5": 36,
     "A2": 1
   },
   "eligible_data_label_counts": {
-    "A5": 35,
+    "A5": 36,
     "A4": 1
   },
   "data_named_public_benchmark_count": 6,
@@ -45,5 +43,5 @@
     "named_benchmark": 6,
     "public_dataset_claim": 1
   },
-  "review_required_count": 1
+  "review_required_count": 0
 }
