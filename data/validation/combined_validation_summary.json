@@ -1,0 +1,34 @@
+{
+  "sources": {
+    "phm": {
+      "source": "phm",
+      "sample_size": 60,
+      "code_accuracy": 0.9833333333333333,
+      "data_accuracy": 0.8,
+      "joint_accuracy": 0.8,
+      "code_a1_precision": 1.0,
+      "data_a1_precision": 1.0,
+      "disagreement_count": 12,
+      "headline_note": "Disagreements are concentrated in broader public-data-access sensitivity cases; strict A1 calls remain high precision."
+    },
+    "ijphm": {
+      "source": "ijphm",
+      "sample_size": 60,
+      "code_accuracy": 1.0,
+      "data_accuracy": 1.0,
+      "joint_accuracy": 1.0,
+      "code_a1_precision": 1.0,
+      "data_a1_precision": 0.0,
+      "disagreement_count": 0,
+      "headline_note": "The strict IJPHM sample matched after targeted fixes for repository links, reference-only URLs, and generic system-language false positives."
+    }
+  },
+  "combined": {
+    "total_sample_size": 120,
+    "weighted_code_accuracy": 0.9916666666666667,
+    "weighted_data_accuracy": 0.9,
+    "weighted_joint_accuracy": 0.9,
+    "strict_policy_note": "Strict A1-A5 results remain official. Benchmark and externally public dataset access are tracked as a separate appendix-facing dimension.",
+    "intentional_conservatism_note": "The analyzer is conservative by design and may undercall broader public-data access when no author-controlled artifact release is stated."
+  }
+}

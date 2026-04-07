@@ -1,0 +1,3 @@
+source,sample_size,code_accuracy,data_accuracy,joint_accuracy,code_a1_precision,data_a1_precision,disagreement_count,headline_note
+phm,60,0.9833333333333333,0.8,0.8,1.0,1.0,12,Disagreements are concentrated in broader public-data-access sensitivity cases; strict A1 calls remain high precision.
+ijphm,60,1.0,1.0,1.0,1.0,0.0,0,"The strict IJPHM sample matched after targeted fixes for repository links, reference-only URLs, and generic system-language false positives."

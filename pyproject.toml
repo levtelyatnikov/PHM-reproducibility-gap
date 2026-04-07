@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "phm-paper-parser"
+version = "0.1.0"
+description = "Reproducibility audit framework for PHM Society Conference and IJPHM papers."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "beautifulsoup4>=4.12",
+  "pydantic>=2.8",
+  "pypdf>=5.1",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+pdf = [
+  "pdfplumber>=0.11",
+  "pymupdf>=1.24",
+]
+plots = [
+  "matplotlib>=3.9",
+]
+dev = [
+  "pytest>=8.3",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["shared", "parsers", "engine", "scripts", "plots"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "/shared",
+  "/parsers",
+  "/engine",
+  "/scripts",
+  "/plots",
+  "/config",
+  "/tests",
+  "/README.md",
+  "/pyproject.toml",
+]

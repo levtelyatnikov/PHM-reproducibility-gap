@@ -1,0 +1,66 @@
+{
+  "source_group": "combined",
+  "year": null,
+  "paper_count": 329,
+  "repro_audit_eligible_count": 327,
+  "track_counts": {
+    "Technical Research Papers": 163,
+    "Industry Experience Papers": 42,
+    "Technical Papers": 124
+  },
+  "retrieval_status_counts": {
+    "full_text": 327,
+    "pdf_downloaded": 1,
+    "metadata_only": 1
+  },
+  "analysis_text_source_counts": {
+    "full_text": 327,
+    "missing_full_text": 2
+  },
+  "code_label_counts": {
+    "A5": 305,
+    "A1": 8,
+    "A2": 14,
+    "A3": 2
+  },
+  "data_label_counts": {
+    "A2": 3,
+    "A5": 317,
+    "A4": 5,
+    "A3": 2,
+    "A1": 2
+  },
+  "eligible_code_label_counts": {
+    "A5": 303,
+    "A1": 8,
+    "A2": 14,
+    "A3": 2
+  },
+  "eligible_data_label_counts": {
+    "A2": 3,
+    "A5": 315,
+    "A4": 5,
+    "A3": 2,
+    "A1": 2
+  },
+  "data_named_public_benchmark_count": 60,
+  "eligible_data_named_public_benchmark_count": 60,
+  "data_public_external_dataset_count": 69,
+  "eligible_data_public_external_dataset_count": 69,
+  "data_public_benchmark_name_counts": {
+    "IMS": 6,
+    "C-MAPSS": 28,
+    "PRONOSTIA": 4,
+    "CALCE": 3,
+    "CWRU": 14,
+    "N-CMAPSS": 1,
+    "XJTU-SY": 3,
+    "MIMII": 1
+  },
+  "data_public_external_dataset_type_counts": {
+    "named_benchmark": 60,
+    "public_repository_reference": 1,
+    "public_dataset_claim": 8
+  },
+  "review_required_count": 2
+}

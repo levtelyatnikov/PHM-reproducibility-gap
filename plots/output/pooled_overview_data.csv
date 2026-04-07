@@ -1,0 +1,5 @@
+category,count,total,proportion
+Neither publicly available,321,329,0.9756838905775076
+Only data publicly available,0,329,0.0
+Only code publicly available,6,329,0.0182370820668693
+Both code and data publicly available,2,329,0.0060790273556231

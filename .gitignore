@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+**/.DS_Store
+report/
+paper/
+paper/build/*.aux
+paper/build/*.log
+paper/build/*.out
+data/*
+!data/processed/
+!data/processed/**
+!data/validation/
+!data/validation/**
+data/**/.DS_Store

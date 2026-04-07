@@ -1,0 +1,3 @@
+source_group,paper_count,external_public_data_count,external_public_data_share,external_public_data_type_counts
+phm_society_conf,205,35,0.17073170731707318,"{'named_benchmark': 28, 'public_repository_reference': 1, 'public_dataset_claim': 6}"
+ijphm,124,34,0.27419354838709675,"{'named_benchmark': 32, 'public_dataset_claim': 2}"

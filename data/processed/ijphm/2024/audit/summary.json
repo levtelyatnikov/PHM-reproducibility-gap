@@ -1,0 +1,49 @@
+{
+  "source_group": "ijphm",
+  "year": 2024,
+  "paper_count": 37,
+  "repro_audit_eligible_count": 36,
+  "track_counts": {
+    "Technical Papers": 37
+  },
+  "retrieval_status_counts": {
+    "full_text": 36,
+    "metadata_only": 1
+  },
+  "analysis_text_source_counts": {
+    "full_text": 36,
+    "missing_full_text": 1
+  },
+  "code_label_counts": {
+    "A5": 36,
+    "A2": 1
+  },
+  "data_label_counts": {
+    "A5": 36,
+    "A4": 1
+  },
+  "eligible_code_label_counts": {
+    "A5": 35,
+    "A2": 1
+  },
+  "eligible_data_label_counts": {
+    "A5": 35,
+    "A4": 1
+  },
+  "data_named_public_benchmark_count": 6,
+  "eligible_data_named_public_benchmark_count": 6,
+  "data_public_external_dataset_count": 7,
+  "eligible_data_public_external_dataset_count": 7,
+  "data_public_benchmark_name_counts": {
+    "C-MAPSS": 2,
+    "CALCE": 1,
+    "MIMII": 1,
+    "IMS": 1,
+    "CWRU": 1
+  },
+  "data_public_external_dataset_type_counts": {
+    "named_benchmark": 6,
+    "public_dataset_claim": 1
+  },
+  "review_required_count": 1
+}

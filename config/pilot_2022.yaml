@@ -1,0 +1,18 @@
+storage_root: ./data
+openrouter:
+  base_url: https://openrouter.ai/api/v1
+  models:
+    - openai/gpt-4o-mini
+    - anthropic/claude-3.5-haiku
+    - google/gemini-1.5-flash
+phm:
+  issue_urls:
+    2022: https://papers.phmsociety.org/index.php/phmconf/issue/view/59
+    2023: https://papers.phmsociety.org/index.php/phmconf/issue/view/63
+    2024: https://papers.phmsociety.org/index.php/phmconf/issue/view/70
+    2025: https://papers.phmsociety.org/index.php/phmconf/issue/view/74
+ijphm:
+  archive_url: https://papers.phmsociety.org/index.php/ijphm/issue/archive
+pipeline:
+  timeout_seconds: 30
+  user_agent: PHMReproAudit/0.1

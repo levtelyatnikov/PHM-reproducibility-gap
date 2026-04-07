@@ -1,0 +1,10 @@
+scope,category,count,total,proportion
+Pooled,Strict data A1,2,329,0.0060790273556231
+Pooled,Named benchmark,60,329,0.182370820668693
+Pooled,External public data,69,329,0.20972644376899696
+PHM Society Conference,Strict data A1,2,205,0.00975609756097561
+PHM Society Conference,Named benchmark,28,205,0.13658536585365855
+PHM Society Conference,External public data,35,205,0.17073170731707318
+IJPHM,Strict data A1,0,124,0.0
+IJPHM,Named benchmark,32,124,0.25806451612903225
+IJPHM,External public data,34,124,0.27419354838709675

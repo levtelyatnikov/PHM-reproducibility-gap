@@ -1,0 +1,47 @@
+{
+  "source_group": "phm_society_conf",
+  "year": 2024,
+  "paper_count": 46,
+  "repro_audit_eligible_count": 46,
+  "track_counts": {
+    "Technical Research Papers": 38,
+    "Industry Experience Papers": 8
+  },
+  "retrieval_status_counts": {
+    "full_text": 46
+  },
+  "analysis_text_source_counts": {
+    "full_text": 46
+  },
+  "code_label_counts": {
+    "A5": 41,
+    "A2": 3,
+    "A1": 2
+  },
+  "data_label_counts": {
+    "A5": 45,
+    "A1": 1
+  },
+  "eligible_code_label_counts": {
+    "A5": 41,
+    "A2": 3,
+    "A1": 2
+  },
+  "eligible_data_label_counts": {
+    "A5": 45,
+    "A1": 1
+  },
+  "data_named_public_benchmark_count": 5,
+  "eligible_data_named_public_benchmark_count": 5,
+  "data_public_external_dataset_count": 8,
+  "eligible_data_public_external_dataset_count": 8,
+  "data_public_benchmark_name_counts": {
+    "IMS": 1,
+    "C-MAPSS": 4
+  },
+  "data_public_external_dataset_type_counts": {
+    "named_benchmark": 5,
+    "public_dataset_claim": 3
+  },
+  "review_required_count": 0
+}
