@@ -172,10 +172,43 @@ def _split_sentences(text: str) -> list[str]:
     return [sentence.strip() for sentence in re.split(r"(?<=[.!?])\s+", normalized) if sentence.strip()]
 
 
+def _looks_like_reference_citation(sentence: str) -> bool:
+    normalized = _normalize_text(sentence)
+    lowered = normalized.lower()
+    has_url = bool(re.search(r"(?:https?://|www\.)", normalized)) or "url http" in lowered
+    if not has_url:
+        return False
+
+    release_markers = (
+        "available at",
+        "available on",
+        "our code",
+        "our repository",
+        "our repo",
+        "we release",
+        "we provide",
+        "code is available",
+        "framework is available",
+        "implementation is available",
+        "package is available",
+        "tool is available",
+        "supplementary material",
+    )
+    if any(marker in lowered for marker in release_markers):
+        return False
+
+    author_hits = len(re.findall(r"\b[A-Z][a-zA-Z-]+,\s*[A-Z]\.", normalized))
+    year_hit = bool(re.search(r"\(\d{4}\)", normalized))
+    citation_markers = author_hits >= 2 or normalized.count(";") >= 2 or "doi" in lowered or "vol." in lowered or "pp." in lowered
+    return has_url and year_hit and citation_markers
+
+
 def _candidate_sentences(channel: str, text: str) -> list[str]:
     sentences = _split_sentences(_strip_non_signal_sections(text))
     candidates: list[str] = []
     for sentence in sentences:
+        if _looks_like_reference_citation(sentence):
+            continue
         if _sentence_matches_channel(channel, sentence):
             candidates.append(sentence)
     return candidates
@@ -629,6 +662,8 @@ def classify_channel(channel: str, text: str, evidence_windows: list[EvidenceWin
 
     for window in windows:
         claim_text = _claim_text_for_window(window)
+        if _looks_like_reference_citation(claim_text):
+            continue
         context = claim_text.lower()
         if window.url:
             urls.append(window.url)

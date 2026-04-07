@@ -15,9 +15,9 @@
     "full_text": 329
   },
   "code_label_counts": {
-    "A5": 304,
+    "A5": 305,
     "A1": 8,
-    "A2": 15,
+    "A2": 14,
     "A3": 2
   },
   "data_label_counts": {
@@ -28,9 +28,9 @@
     "A1": 2
   },
   "eligible_code_label_counts": {
-    "A5": 304,
+    "A5": 305,
     "A1": 8,
-    "A2": 15,
+    "A2": 14,
     "A3": 2
   },
   "eligible_data_label_counts": {

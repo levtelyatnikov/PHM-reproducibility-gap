@@ -160,6 +160,20 @@ def test_code_channel_ignores_reference_section_github_links() -> None:
     assert assessment.label == "A5"
 
 
+def test_code_channel_ignores_bibliography_style_url_citations_before_references_heading() -> None:
+    text = """
+    TP True Positive.
+    Teubert, C.; Jarvis, K.; Corbetta, M.; Kulkarni, C.; and Daigle, M. (2022).
+    ProgPy Python Prognostic Packages v1.4. URL https://nasa.github.io/progpy.
+    Robert Meissner, Antonia Rahn, Kai Wicke (2021).
+    REFERENCES Developing prescriptive maintenance strategies in the aviation industry.
+    """
+
+    assessment = classify_channel("code", text, extract_evidence_windows(text))
+
+    assert assessment.label == "A5"
+
+
 def test_data_channel_detects_not_publicly_available_even_with_such_data_wording() -> None:
     text = """
     However, such data and the design of the experiment are not publicly available.
