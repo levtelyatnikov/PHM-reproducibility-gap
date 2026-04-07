@@ -124,7 +124,7 @@ The manual PHM and IJPHM spot checks are intended to support exactly this distin
 
 The repo already includes real-paper regression cases in:
 
-- [/Users/leone/projects/PHM_paper_parser/tests/engine/test_real_pdf_cases.py](/Users/leone/projects/PHM_paper_parser/tests/engine/test_real_pdf_cases.py)
+- [tests/engine/test_real_pdf_cases.py](tests/engine/test_real_pdf_cases.py)
 
 The suite is intended to keep common failure modes fixed over time:
 

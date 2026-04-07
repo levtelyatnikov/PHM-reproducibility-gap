@@ -39,7 +39,7 @@ That means:
 - abstract-only evidence is not sufficient for final PHM/IJPHM statistics
 - papers without usable extracted full text are marked explicitly and excluded from strong reproducibility claims
 
-This policy is enforced centrally in [`scripts/bootstrap_2022.py`](/Users/leone/projects/PHM_paper_parser/scripts/bootstrap_2022.py) through the analysis-text selection path.
+This policy is enforced centrally in [`scripts/bootstrap_2022.py`](scripts/bootstrap_2022.py) through the analysis-text selection path.
 
 The relevant output fields are:
 
@@ -57,9 +57,9 @@ The main flow is:
 3. Extract text from the PDF with PyMuPDF first, then `pdfplumber` and `pypdf` fallbacks.
 4. Select the analysis text with a full-text-first policy.
 5. Build evidence windows around URLs and availability statements.
-6. Classify `code` and `data` separately with deterministic rules in [`engine/rules.py`](/Users/leone/projects/PHM_paper_parser/engine/rules.py).
+6. Classify `code` and `data` separately with deterministic rules in [`engine/rules.py`](engine/rules.py).
 7. Optionally send the same evidence to a three-judge OpenRouter ensemble.
-8. Merge deterministic and judge outputs in [`engine/consensus.py`](/Users/leone/projects/PHM_paper_parser/engine/consensus.py).
+8. Merge deterministic and judge outputs in [`engine/consensus.py`](engine/consensus.py).
 9. Write paper-level outputs to `audit_results.csv`, `audit_trace.csv`, and `manual_review_queue.csv`.
 
 ## Deterministic Rules
@@ -189,20 +189,20 @@ This signal is intentionally orthogonal to the strict `A1–A5` labels.
 
 The main outputs are:
 
-- [/Users/leone/projects/PHM_paper_parser/data/processed/audit_results.csv](/Users/leone/projects/PHM_paper_parser/data/processed/audit_results.csv)
-- [/Users/leone/projects/PHM_paper_parser/data/processed/audit_trace.csv](/Users/leone/projects/PHM_paper_parser/data/processed/audit_trace.csv)
-- [/Users/leone/projects/PHM_paper_parser/data/processed/manual_review_queue.csv](/Users/leone/projects/PHM_paper_parser/data/processed/manual_review_queue.csv)
+- [data/processed/audit_results.csv](data/processed/audit_results.csv)
+- [data/processed/audit_trace.csv](data/processed/audit_trace.csv)
+- [data/processed/manual_review_queue.csv](data/processed/manual_review_queue.csv)
 
 Per-year bundles are written under:
 
-- [/Users/leone/projects/PHM_paper_parser/data/processed/phm_society_conf](/Users/leone/projects/PHM_paper_parser/data/processed/phm_society_conf)
-- [/Users/leone/projects/PHM_paper_parser/data/processed/ijphm](/Users/leone/projects/PHM_paper_parser/data/processed/ijphm)
+- [data/processed/phm_society_conf](data/processed/phm_society_conf)
+- [data/processed/ijphm](data/processed/ijphm)
 
 ## Real-Case Regression Suite
 
 The real-PDF regression suite is in:
 
-- [/Users/leone/projects/PHM_paper_parser/tests/engine/test_real_pdf_cases.py](/Users/leone/projects/PHM_paper_parser/tests/engine/test_real_pdf_cases.py)
+- [tests/engine/test_real_pdf_cases.py](tests/engine/test_real_pdf_cases.py)
 
 It includes real PHM papers spanning all five categories and protects against regressions such as:
 
@@ -219,4 +219,4 @@ The validation package lives alongside the code and processed outputs:
 - evaluation metrics and disagreement export
 - benchmark appendix tables
 
-See [/Users/leone/projects/PHM_paper_parser/VALIDATION.md](/Users/leone/projects/PHM_paper_parser/VALIDATION.md) for the validation protocol.
+See [VALIDATION.md](VALIDATION.md) for the validation protocol.

@@ -11,11 +11,11 @@ This report summarizes a manual validation pass over a reproducible `60`-paper I
 
 Artifacts:
 
-- [/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_sample.csv](/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_sample.csv)
-- [/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_snippets.csv](/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_snippets.csv)
-- [/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_gold.csv](/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_gold.csv)
-- [/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_eval/evaluation_summary.json](/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_eval/evaluation_summary.json)
-- [/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_eval/evaluation_disagreements.csv](/Users/leone/projects/PHM_paper_parser/data/validation/ijphm_manual_validation_eval/evaluation_disagreements.csv)
+- [data/validation/ijphm_manual_validation_sample.csv](data/validation/ijphm_manual_validation_sample.csv)
+- [data/validation/ijphm_manual_validation_snippets.csv](data/validation/ijphm_manual_validation_snippets.csv)
+- [data/validation/ijphm_manual_validation_gold.csv](data/validation/ijphm_manual_validation_gold.csv)
+- [data/validation/ijphm_manual_validation_eval/evaluation_summary.json](data/validation/ijphm_manual_validation_eval/evaluation_summary.json)
+- [data/validation/ijphm_manual_validation_eval/evaluation_disagreements.csv](data/validation/ijphm_manual_validation_eval/evaluation_disagreements.csv)
 
 ## Current Strict-Label Results
 
@@ -54,7 +54,7 @@ The manual IJPHM pass surfaced four concrete rule classes:
 4. Dataset papers can make owned public-access claims without a direct link.
    - these belong in `A2`, not `A5`
 
-These patterns are now covered by regression tests in [/Users/leone/projects/PHM_paper_parser/tests/engine/test_rules.py](/Users/leone/projects/PHM_paper_parser/tests/engine/test_rules.py).
+These patterns are now covered by regression tests in [tests/engine/test_rules.py](tests/engine/test_rules.py).
 
 ## Recommendation For The Paper
 

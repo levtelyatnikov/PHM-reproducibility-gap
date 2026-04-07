@@ -99,15 +99,15 @@ The main inspection file is the yearly `audit_trace.csv`. Each row includes:
 
 Start with:
 
-- [/Users/leone/projects/PHM_paper_parser/data/processed/phm_society_conf/2022/audit/audit_trace.csv](/Users/leone/projects/PHM_paper_parser/data/processed/phm_society_conf/2022/audit/audit_trace.csv)
-- [/Users/leone/projects/PHM_paper_parser/data/processed/ijphm/2025/audit/audit_trace.csv](/Users/leone/projects/PHM_paper_parser/data/processed/ijphm/2025/audit/audit_trace.csv)
+- [data/processed/phm_society_conf/2022/audit/audit_trace.csv](data/processed/phm_society_conf/2022/audit/audit_trace.csv)
+- [data/processed/ijphm/2025/audit/audit_trace.csv](data/processed/ijphm/2025/audit/audit_trace.csv)
 
 ## Main Outputs
 
 Per-year processed outputs are committed under:
 
-- [/Users/leone/projects/PHM_paper_parser/data/processed/phm_society_conf](/Users/leone/projects/PHM_paper_parser/data/processed/phm_society_conf)
-- [/Users/leone/projects/PHM_paper_parser/data/processed/ijphm](/Users/leone/projects/PHM_paper_parser/data/processed/ijphm)
+- [data/processed/phm_society_conf](data/processed/phm_society_conf)
+- [data/processed/ijphm](data/processed/ijphm)
 
 Each yearly audit bundle contains:
 
@@ -120,7 +120,7 @@ Each yearly audit bundle contains:
 
 The pooled main-paper figure is:
 
-- [/Users/leone/projects/PHM_paper_parser/plots/output/pooled_reproducibility_2022_2025.pdf](/Users/leone/projects/PHM_paper_parser/plots/output/pooled_reproducibility_2022_2025.pdf)
+- [plots/output/pooled_reproducibility_2022_2025.pdf](plots/output/pooled_reproducibility_2022_2025.pdf)
 
 ## Limitations
 
@@ -130,4 +130,4 @@ The pooled main-paper figure is:
 - The public repository publishes processed evidence logs, not copyrighted raw corpora.
 - A small number of papers remain non-eligible because usable extracted full text was not recovered.
 
-See [/Users/leone/projects/PHM_paper_parser/ANALYZER.md](/Users/leone/projects/PHM_paper_parser/ANALYZER.md) for the labeling logic and [/Users/leone/projects/PHM_paper_parser/VALIDATION.md](/Users/leone/projects/PHM_paper_parser/VALIDATION.md) for the validation workflow.
+See [ANALYZER.md](ANALYZER.md) for the labeling logic and [VALIDATION.md](VALIDATION.md) for the validation workflow.

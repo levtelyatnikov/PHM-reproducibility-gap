@@ -12,14 +12,14 @@ This report documents a manual validation pass over a reproducible sample of PHM
 
 The sampled rows are stored in:
 
-- [/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_sample.csv](/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_sample.csv)
-- [/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_snippets.csv](/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_snippets.csv)
-- [/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_gold.csv](/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_gold.csv)
+- [data/validation/phm_manual_validation_sample.csv](data/validation/phm_manual_validation_sample.csv)
+- [data/validation/phm_manual_validation_snippets.csv](data/validation/phm_manual_validation_snippets.csv)
+- [data/validation/phm_manual_validation_gold.csv](data/validation/phm_manual_validation_gold.csv)
 
 The comparison against the current analyzer output is stored in:
 
-- [/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_eval/evaluation_summary.json](/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_eval/evaluation_summary.json)
-- [/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_eval/evaluation_disagreements.csv](/Users/leone/projects/PHM_paper_parser/data/validation/phm_manual_validation_eval/evaluation_disagreements.csv)
+- [data/validation/phm_manual_validation_eval/evaluation_summary.json](data/validation/phm_manual_validation_eval/evaluation_summary.json)
+- [data/validation/phm_manual_validation_eval/evaluation_disagreements.csv](data/validation/phm_manual_validation_eval/evaluation_disagreements.csv)
 
 ## Manual Policy And Current Interpretation
 
